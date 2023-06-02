@@ -1,0 +1,410 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000, #222222);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: linear-gradient(45deg, #000000, #212121);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2), 0px 4px 8px rgba(0, 0, 0, 0.1),
+    0px 8px 16px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  padding-right: 20px;
+  background: linear-gradient(145deg, #12161f, #1d2434);
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+.eth {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+  background: linear-gradient(145deg, #12161f, #1d2434);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+.leftH {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rightH {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.connectButton {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.8),
+    rgba(255, 127, 0, 0.8),
+    rgba(255, 255, 0, 0.8),
+    rgba(0, 255, 0, 0.8),
+    rgba(0, 0, 255, 0.8),
+    rgba(139, 0, 255, 0.8),
+    rgba(255, 0, 0, 0.8)
+  );
+  background-size: 1400% 100%;
+  animation: rainbowBackground 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -2px -2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes rainbowBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.headerItem {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.headerItem:hover {
+  background-color: rgba(34, 42, 58, 0.8);
+  cursor: pointer;
+}
+
+.connectButton {
+  background-color: #000000;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 100px;
+  color: #ffffff;
+  font-weight: bold;
+  transition: 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+.connectButton:hover {
+  cursor: pointer;
+  background-color: #222222;
+}
+
+.mainWindow {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.tradeBox {
+  width: 400px;
+  height: auto;
+  max-width: 100%;
+  padding: 30px;
+  background-color: #18233e;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.2) inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tradeBox:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.8),
+    rgba(255, 127, 0, 0.8),
+    rgba(255, 255, 0, 0.8),
+    rgba(0, 255, 0, 0.8),
+    rgba(0, 0, 255, 0.8),
+    rgba(139, 0, 255, 0.8),
+    rgba(255, 0, 0, 0.8)
+  );
+  background-size: 1400% 100%;
+  animation: rainbowBackground 5s linear infinite;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+@keyframes rainbowBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tradeBoxHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: transparent;
+  border-radius: 0 0 15px 15px;
+  border-bottom: none;
+}
+
+.tradeBoxHeader h2 {
+  margin: 0;
+}
+
+.tradeBoxHeader .closeButton {
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.tradeBoxHeader .closeButton:hover {
+  color: #5981f3;
+}
+
+.cog {
+  color: #51586f;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.cog:hover {
+  color: white;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.switchButton {
+  background-color: #3a4157;
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 8px;
+  position: absolute;
+  top: 86px;
+  left: 180px;
+  color: #5f6783;
+  border: 3px solid #0e111b;
+  font-size: 12px;
+  transition: 0.3s;
+}
+.dollarAmount {
+  position: absolute;
+  top: 75px;
+  left: 14px;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.switchButton:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.inputs {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputs input {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border: 2px solid #243056;
+  border-radius: 8px;
+  background-color: #18233e;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.inputs input::placeholder {
+  color: #8c94a6;
+}
+
+.inputs input:focus {
+  border-color: #5981f3;
+  box-shadow: 0 0 0 3px rgba(89, 129, 243, 0.2);
+}
+.assetOne,
+.assetTwo {
+  position: absolute;
+  min-width: 50px;
+  height: 30px;
+  top: 36px;
+  right: 20px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  padding-right: 8px;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.assetOne {
+  background: linear-gradient(to right, #5981f3, #3765c8);
+}
+
+.assetTwo {
+  background: linear-gradient(to right, #5981f3, #3765c8);
+  top: 135px;
+}
+
+.assetOne:hover,
+.assetTwo:hover {
+  cursor: pointer;
+}
+
+.assetLogo {
+  height: 22px;
+  margin-left: 5px;
+}
+
+.swapButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      45deg,
+      rgba(32, 44, 66, 0.8),
+      rgba(14, 17, 27, 0.8)
+    ),
+    radial-gradient(circle, rgba(32, 44, 66, 0.8), rgba(14, 17, 27, 0.8));
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 55px;
+  font-size: 20px;
+  border-radius: 12px;
+  color: #5981f3;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-bottom: 30px;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.2) inset;
+}
+
+.swapButton {
+  background-color: #5981f3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.swapButton[disabled] {
+  background-color: #243056;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.swapButton:hover {
+  background-color: #3b4874;
+}
+
+.tokenLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.modalContent {
+  border-top: 1px solid #363e54;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tokenChoice {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  background-color: #1f2639;
+}
+
+.tokenName {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.tokenTicker {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #51596f;
+}
