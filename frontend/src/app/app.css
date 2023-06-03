@@ -136,7 +136,11 @@ header {
   height: auto;
   max-width: 100%;
   padding: 30px;
-  background-color: #18233e;
+  background: linear-gradient(
+    to bottom,
+    #000000,
+    #111111
+  ); /* Use a black gradient background */
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.2) inset;
   display: flex;
@@ -150,41 +154,6 @@ header {
   transform: translate(-50%, -50%);
 }
 
-.tradeBox:before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 0, 0, 0.8),
-    rgba(255, 127, 0, 0.8),
-    rgba(255, 255, 0, 0.8),
-    rgba(0, 255, 0, 0.8),
-    rgba(0, 0, 255, 0.8),
-    rgba(139, 0, 255, 0.8),
-    rgba(255, 0, 0, 0.8)
-  );
-  background-size: 1400% 100%;
-  animation: rainbowBackground 5s linear infinite;
-  z-index: -1;
-  border-radius: 15px;
-}
-
-@keyframes rainbowBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .tradeBoxHeader {
   display: flex;
   justify-content: space-between;
@@ -194,7 +163,7 @@ header {
   font-size: 24px;
   font-weight: bold;
   padding: 10px 20px;
-  background-color: transparent;
+  background-color: #000000; /* Set the background color to black */
   border-radius: 0 0 15px 15px;
   border-bottom: none;
 }
@@ -220,7 +189,7 @@ header {
 }
 
 .cog:hover {
-  color: white;
+  color: #ffffff;
   transform: rotate(90deg);
   cursor: pointer;
 }
@@ -266,7 +235,7 @@ header {
   padding: 10px;
   border: 2px solid #243056;
   border-radius: 8px;
-  background-color: #18233e;
+  background-color: #000000; /* Set the background color to black */
   color: #ffffff;
   font-size: 16px;
   outline: none;
@@ -281,6 +250,7 @@ header {
   border-color: #5981f3;
   box-shadow: 0 0 0 3px rgba(89, 129, 243, 0.2);
 }
+
 .assetOne,
 .assetTwo {
   position: absolute;
